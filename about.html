@@ -1,0 +1,430 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Felicia M. Laster</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .about-section {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .section-header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .section-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .section-header .tagline {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .about-content {
+            padding: 50px 40px;
+        }
+        
+        .intro-section {
+            margin-bottom: 50px;
+        }
+        
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin: 50px 0;
+        }
+        
+        .expertise-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 30px;
+            border-left: 4px solid #3498db;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .expertise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .expertise-card h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .expertise-card h3::before {
+            content: '▶';
+            color: #3498db;
+            margin-right: 10px;
+            font-size: 0.8rem;
+        }
+        
+        .expertise-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .expertise-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .expertise-card li:last-child {
+            border-bottom: none;
+        }
+        
+        .expertise-card li strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .certifications-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 8px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        
+        .certifications-section h3 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .certification-item {
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 3px solid #27ae60;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .certification-item strong {
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .certification-item span {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .achievements-section {
+            margin: 50px 0;
+        }
+        
+        .achievements-section h3 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .achievement-item {
+            text-align: center;
+            padding: 25px;
+            background: white;
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+            transition: border-color 0.3s ease;
+        }
+        
+        .achievement-item:hover {
+            border-color: #3498db;
+        }
+        
+        .achievement-item h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .achievement-item p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .unique-value {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 8px;
+            margin: 50px 0;
+            text-align: center;
+        }
+        
+        .unique-value h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+        
+        .unique-value p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 40px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        
+        .cta-section h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+        
+        .cta-section p {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        .cta-button.secondary {
+            background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+        }
+        
+        .cta-button.secondary:hover {
+            box-shadow: 0 6px 15px rgba(149, 165, 166, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                padding: 30px 20px;
+            }
+            
+            .section-header h1 {
+                font-size: 2rem;
+            }
+            
+            .section-header .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .expertise-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="about-section">
+            <div class="section-header">
+                <h1>About Felicia M. Laster</h1>
+                <p class="tagline">Transforming Complex Challenges Into Elegant Solutions</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="intro-section">
+                    <p class="intro-text">
+                        Full-stack software engineer with a unique foundation: 10+ years of enterprise data management, 
+                        system optimization, and user-centered problem solving in high-stakes educational environments. 
+                        Currently developing modern web applications through intensive bootcamp training while maintaining 
+                        expertise in complex database systems and cross-platform integration.
+                    </p>
+                </div>
+                
+                <div class="expertise-grid">
+                    <div class="expertise-card">
+                        <h3>Technical Expertise & Development Focus</h3>
+                        <ul>
+                            <li><strong>Full-Stack Development:</strong> JavaScript, React, Node.js, HTML5, CSS3</li>
+                            <li><strong>Database Management:</strong> Complex multi-platform data integration and optimization</li>
+                            <li><strong>Version Control:</strong> Git workflows and collaborative development</li>
+                            <li><strong>Accessibility Standards:</strong> WCAG compliance and inclusive design principles</li>
+                            <li><strong>API Development:</strong> RESTful services and system integration</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="expertise-card">
+                        <h3>Proven Track Record</h3>
+                        <ul>
+                            <li><strong>Process Optimization:</strong> Improved system efficiency by 25% through automated workflows</li>
+                            <li><strong>Cross-Functional Leadership:</strong> Managed department-wide technology implementations</li>
+                            <li><strong>Complex Problem Solving:</strong> 99.9% data accuracy in enterprise environments</li>
+                            <li><strong>International Collaboration:</strong> Two years coordinating technology solutions globally</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="certifications-section">
+                    <h3>Professional Certifications</h3>
+                    <div class="certifications-grid">
+                        <div class="certification-item">
+                            <strong>Google Advanced Data Analytics Certificate</strong>
+                            <span>(2024)</span>
+                        </div>
+                        <div class="certification-item">
+                            <strong>Google Cybersecurity Certificate</strong>
+                            <span>(2024)</span>
+                        </div>
+                        <div class="certification-item">
+                            <strong>Google Business Intelligence Certificate</strong>
+                            <span>(2024)</span>
+                        </div>
+                        <div class="certification-item">
+                            <strong>Google UX Design Certificate</strong>
+                            <span>(In Progress)</span>
+                        </div>
+                        <div class="certification-item">
+                            <strong>Google Project Management Certificate</strong>
+                            <span>(In Progress)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="unique-value">
+                    <h3>What Sets Me Apart</h3>
+                    <p>
+                        My background managing critical educational databases means I understand enterprise-level complexity, 
+                        regulatory compliance, and the real-world impact of system failures. I bring both technical skills 
+                        and deep user empathy – having spent years making complex technology accessible to diverse users 
+                        with varying abilities and needs.
+                    </p>
+                </div>
+                
+                <div class="achievements-section">
+                    <h3>Current Impact & Vision</h3>
+                    <div class="achievements-grid">
+                        <div class="achievement-item">
+                            <h4>Continuous Innovation</h4>
+                            <p>While developing full-stack applications, I continue optimizing data management systems that directly impact student outcomes.</p>
+                        </div>
+                        <div class="achievement-item">
+                            <h4>Dual Perspective</h4>
+                            <p>This unique combination ensures I build solutions that aren't just technically sound, but genuinely useful and accessible.</p>
+                        </div>
+                        <div class="achievement-item">
+                            <h4>Real-World Solutions</h4>
+                            <p>Focused on creating software solutions that solve real problems for real people through user-centered design thinking.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-section">
+                    <h3>Ready to Contribute</h3>
+                    <p>
+                        Seeking opportunities to apply my unique combination of technical development skills, 
+                        enterprise system experience, and user-centered design thinking.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="cta-button">Get In Touch</a>
+                        <a href="#projects" class="cta-button secondary">View My Work</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

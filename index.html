@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio Wireframe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        
+        .wireframe-section {
+            background: white;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .section-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .section-header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        
+        .wireframe-content {
+            padding: 30px;
+        }
+        
+        .wireframe-box {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            background: #fafafa;
+        }
+        
+        .wireframe-box h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .wireframe-box ul {
+            margin-left: 20px;
+        }
+        
+        .wireframe-box li {
+            margin: 5px 0;
+            color: #555;
+        }
+        
+        .layout-visual {
+            display: grid;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .layout-block {
+            background: #e8f4f8;
+            border: 2px dashed #3498db;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #2980b9;
+        }
+        
+        .nav-block {
+            background: #d5e8d4;
+            border-color: #27ae60;
+            color: #229954;
+        }
+        
+        .hero-block {
+            background: #fdeaa7;
+            border-color: #f39c12;
+            color: #d68910;
+            min-height: 100px;
+        }
+        
+        .content-block {
+            background: #fadbd8;
+            border-color: #e74c3c;
+            color: #c0392b;
+        }
+        
+        .footer-block {
+            background: #d6eaf8;
+            border-color: #3498db;
+            color: #2980b9;
+        }
+        
+        .three-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .notes {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .notes h4 {
+            color: #495057;
+            margin-bottom: 10px;
+        }
+        
+        .notes ul {
+            margin-left: 20px;
+        }
+        
+        .notes li {
+            color: #6c757d;
+            margin: 5px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .three-col {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Felicia M. Laster</h1>
+        
+        <div class="wireframe-section">
+            <div class="section-header">
+                <h2>Professional Portfolio Site</h2>
+                <p>Clean, polished showcase for LinkedIn & job applications</p>
+            </div>
+            
+            <div class="wireframe-content">
+                <div class="layout-visual">
+                    <div class="layout-block nav-block">
+                        NAVIGATION BAR
+                        <br><small>Home | About | Projects | Skills | Contact</small>
+                    </div>
+                    
+                    <div class="layout-block hero-block">
+                        HERO SECTION
+                        <br><small>Your Name | Professional Title | Brief Tagline | CTA Button</small>
+                    </div>
+                    
+                    <div class="layout-block content-block">
+                        ABOUT SECTION
+                        <br><small>Professional photo | Bio | Key achievements | Teaching experience</small>
+                    </div>
+                    
+                    <div class="three-col">
+                        <div class="layout-block content-block">
+                            PROJECT 1
+                            <br><small>Black Barbie Chronicles</small>
+                        </div>
+                        <div class="layout-block content-block">
+                            PROJECT 2
+                            <br><small>Global Nomad Chronicles</small>
+                        </div>
+                        <div class="layout-block content-block">
+                            PROJECT 3
+                            <br><small>Future Project</small>
+                        </div>
+                    </div>
+                    
+                    <div class="layout-block content-block">
+                        SKILLS & TECHNOLOGIES
+                        <br><small>HTML/CSS/JS | React | Node.js | Teaching | Languages</small>
+                    </div>
+                    
+                    <div class="layout-block content-block">
+                        CONTACT SECTION
+                        <br><small>Email | LinkedIn | GitHub | Download Resume</small>
+                    </div>
+                    
+                    <div class="layout-block footer-block">
+                        FOOTER
+                        <br><small>Copyright | Social links | Back to top</small>
+                    </div>
+                </div>
+                
+                <div class="notes">
+                    <h4>Professional Site Strategy:</h4>
+                    <ul>
+                        <li>Minimal, clean design with professional color scheme (navy, white, gray)</li>
+                        <li>Only showcase completed, polished projects</li>
+                        <li>Highlight your unique teaching/international background</li>
+                        <li>Mobile-first responsive design</li>
+                        <li>Fast loading, optimized for recruiters who scan quickly</li>
+                        <li>Clear call-to-actions (hire me, contact me, view resume)</li>
+                        <li>Professional headshot and formal bio</li>
+                    </ul>
+                </div>
+                
+                <div class="wireframe-box">
+                    <h3>Content Ideas</h3>
+                    <ul>
+                        <li><strong>Hero:</strong> "Full-Stack Developer with Global Teaching Experience"</li>
+                        <li><strong>About:</strong> How teaching abroad shaped problem-solving skills</li>
+                        <li><strong>Projects:</strong> Focus on technical achievements and user impact</li>
+                        <li><strong>Skills:</strong> Blend technical skills with soft skills from teaching</li>
+                    </ul>
+                </div>
+                
+                <div class="wireframe-box">
+                    <h3>Technical Approach</h3>
+                    <ul>
+                        <li>Semantic HTML5 structure</li>
+                        <li>CSS Grid for main layout, Flexbox for components</li>
+                        <li>Minimal JavaScript for smooth scrolling and contact form</li>
+                        <li>Optimized images and fast loading</li>
+                        <li>Professional typography (system fonts or Google Fonts)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
